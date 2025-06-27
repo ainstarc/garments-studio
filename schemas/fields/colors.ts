@@ -1,14 +1,10 @@
-import ColorSelector from '../components/ColorSelector'
-
-const colors = {
+export default {
   name: 'colors',
   title: 'Available Colors',
   type: 'array',
-  of: [{type: 'string'}],
-  components: {
-    input: ColorSelector,
+  of: [{ type: 'string' }],
+  options: {
+    list: ['Black', 'White', 'Red', 'Blue', 'Green', 'Yellow', 'Beige', 'Pink', 'Orange', 'Grey'],
+    layout: 'tags',
   },
-  validation: (Rule: any) => Rule.required().min(1).error('Select at least one color'),
 }
-
-export default colors

@@ -1,8 +1,6 @@
-const title = {
+export default {
   name: 'title',
   title: 'Title',
   type: 'string',
-  validation: (Rule: any) => Rule.required().min(3).error('Title must be at least 3 characters'),
+  validation: (Rule : any) => Rule.required(),
 }
-
-export default title

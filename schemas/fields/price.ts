@@ -1,8 +1,6 @@
-const price = {
+export default {
   name: 'price',
-  title: 'Price (INR)',
+  title: 'Price (₹)',
   type: 'number',
-  validation: (Rule: any) => Rule.required().min(1).error('Price must be greater than ₹0'),
+  validation: (Rule : any) => Rule.required().min(0),
 }
-
-export default price

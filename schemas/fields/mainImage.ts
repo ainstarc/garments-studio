@@ -1,11 +1,6 @@
-const mainImage = {
+export default {
   name: 'mainImage',
   title: 'Main Image',
   type: 'image',
-  options: {
-    hotspot: true,
-  },
-  validation: (Rule: any) => Rule.required().error('Main image is required'),
+  options: { hotspot: true },
 }
-
-export default mainImage
