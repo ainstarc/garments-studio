@@ -1,4 +1,10 @@
-const garment = {
+import {defineType} from 'sanity'
+import price from './fields/price'
+import sizes from './fields/sizes'
+import colors from './fields/colors'
+import slug from './fields/slug'
+
+const garment = defineType({
   name: 'garment',
   title: 'Garment',
   type: 'document',
@@ -8,51 +14,22 @@ const garment = {
       title: 'Title',
       type: 'string',
     },
-    {
-      name: 'price',
-      title: 'Price (INR)',
-      type: 'number',
-    },
-    {
-      name: 'sizes',
-      title: 'Available Sizes',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        list: ['S', 'M', 'L', 'XL', 'XXL'],
-      },
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'string',
-      options: {
-        list: ['Men', 'Women', 'Kids', 'Unisex'],
-      },
-    },
+    price,
+    sizes,
+    colors,
     {
       name: 'image',
       title: 'Main Image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
+      options: {hotspot: true},
     },
     {
       name: 'description',
       title: 'Description',
       type: 'text',
     },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    },
+    slug,
   ],
-}
+})
 
 export default garment
