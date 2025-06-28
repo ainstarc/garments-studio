@@ -7,6 +7,10 @@ import colors from './fields/colors'
 import mainImage from './fields/mainImage'
 import galleryImages from './fields/galleryImages'
 import slug from './fields/slug'
+import section from './fields/section'
+import type from './fields/type'
+import style from './fields/style'
+import category from './fields/category'
 
 export default defineType({
   name: 'garment',
@@ -21,35 +25,9 @@ export default defineType({
     mainImage,
     galleryImages,
     slug,
-    {
-      name: 'section',
-      title: 'Section',
-      type: 'string',
-      options: {
-        list: ['Men', 'Women', 'Kids'],
-      },
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'type',
-      title: 'Garment Type',
-      type: 'string',
-      options: {
-        list: ['Kurta', 'Shirt', 'Saree', 'Dress', 'Top', 'Pant', 'Skirt', 'T-Shirt'],
-      },
-    },
-    {
-      name: 'style',
-      title: 'Handloom Style',
-      type: 'reference',
-      to: [{type: 'style'}],
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: [{type: 'category'}],
-    },
+    section,
+    type,
+    style,
+    category,
   ],
 })

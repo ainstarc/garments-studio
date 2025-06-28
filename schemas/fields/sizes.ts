@@ -5,6 +5,5 @@ export default {
   of: [{ type: 'string' }],
   options: {
     list: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'Free Size'],
-    layout: 'tags',
   },
 }

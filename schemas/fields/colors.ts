@@ -5,6 +5,5 @@ export default {
   of: [{ type: 'string' }],
   options: {
     list: ['Black', 'White', 'Red', 'Blue', 'Green', 'Yellow', 'Beige', 'Pink', 'Orange', 'Grey'],
-    layout: 'tags',
   },
 }
